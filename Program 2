@@ -1,0 +1,32 @@
+import tkinter as tk
+
+# Function to show the name and address
+def show_info():
+    name_address = "Name: Samuel Lee\nAddress: 394 University Ave W, St Paul, MN"
+    label_info.config(text=name_address)
+
+# Function to quit the application
+def quit_app():
+    root.quit()
+
+# Create the main window
+root = tk.Tk()
+root.title("Personal Info")
+
+# Set the size of the window
+root.geometry("300x200")
+
+# Label to display information
+label_info = tk.Label(root, text="", font=("Arial", 12), justify="left", padx=10, pady=10)
+label_info.pack(pady=20)
+
+# Button to show info
+button_show_info = tk.Button(root, text="Show Info", font=("Arial", 12), command=show_info)
+button_show_info.pack(pady=10)
+
+# Button to quit the application
+button_quit = tk.Button(root, text="Quit", font=("Arial", 12), command=quit_app)
+button_quit.pack(pady=10)
+
+# Run the application
+root.mainloop()
